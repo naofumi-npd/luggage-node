@@ -11,7 +11,7 @@ html.ng-scope(lang='en', ng-app='iframeApp', ng-controller='FoundationSitesIfram
         .title-bar(data-responsive-toggle='widemenu', data-hide-for='medium', data-responsivetoggle='a5xydh-responsivetoggle', style='display: none;')
           .title-bar-left
             button.menu-icon(type='button', data-open='offCanvasLeft', aria-expanded='false', aria-controls='offCanvasLeft')
-            span.title-bar-title Foundation
+            span.title-bar-title img(width='100%' src='https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAYwAAAAJGQ2OTFhMTVjLTg4NGQtNDkxYS05MDk3LTE1NTM5YzMzYTMxZA.jpg')
           .title-bar-right
             span.title-bar-title Login
             button.menu-icon(type='button', data-open='offCanvasRight', aria-expanded='false', aria-controls='offCanvasRight')
@@ -37,7 +37,9 @@ html.ng-scope(lang='en', ng-app='iframeApp', ng-controller='FoundationSitesIfram
         #widemenu.top-bar
           .top-bar-left
             ul.dropdown.menu(data-dropdown-menu='', role='menubar', data-dropdownmenu='g66a8u-dropdownmenu')
-              li.menu-text(role='menuitem', tabindex='0') Foundation
+              li.menu-text(role='menuitem', tabindex='0')
+                a(href='/')
+                  img(width='5%', src='https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAYwAAAAJGQ2OTFhMTVjLTg4NGQtNDkxYS05MDk3LTE1NTM5YzMzYTMxZA.jpg')
               li.has-submenu.is-dropdown-submenu-parent.is-down-arrow(role='menuitem', tabindex='0', title='Item 1', aria-haspopup='true')
                 a(href='#', tabindex='-1') Item 1
                 ul.menu.submenu.vertical.is-dropdown-submenu.first-sub(data-submenu='', aria-hidden='true', tabindex='-1', role='menu')
@@ -64,7 +66,8 @@ html.ng-scope(lang='en', ng-app='iframeApp', ng-controller='FoundationSitesIfram
                 li  
                   a(href='/logout') Logout
               else
-                a(href='/login') Login
+               li 
+                 a(href='/login') Login
               li
                 input(type='search', placeholder='Search')
               li
