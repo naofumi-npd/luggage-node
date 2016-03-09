@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  .row
+    .large-6.columns.large-centered
+      .signup-panel
+        img(
+        width='100%'
+        src='https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAYwAAAAJGQ2OTFhMTVjLTg4NGQtNDkxYS05MDk3LTE1NTM5YzMzYTMxZA.jpg')
+        p.welcome  Welcome back
+        form(method='post')
+          .row.collapse
+            .small-12.columns
+              input(type='email', placeholder='email')
+          .row.collapse
+            .small-12.columns
+              input(type='password', placeholder='password')
+          .button-container    
+            button.button(type='submit') Login!

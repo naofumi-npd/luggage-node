@@ -1,0 +1,46 @@
+extends layout
+
+block content
+  #top
+    #cover
+      .row
+         h1= title
+         h3 Smile. That's what I love. I will shut down this service once I become a millionaire. So please use this service. Please help me. 
+  section.section 
+    .row
+      .small-12.medium-4.columns 
+        img(width='100%', src='https://thesmartermerchant.com/wp-content/uploads/2014/03/howitworks_howitworks.png')
+      .small-12.medium-4.columns
+        img(width='100%', src='https://thesmartermerchant.com/wp-content/uploads/2014/03/howitworks_howitworks.png')
+      .small-12.medium-4.columns
+        img(width='100%', src='https://thesmartermerchant.com/wp-content/uploads/2014/03/howitworks_howitworks.png')
+  section.section
+    .row
+      each val, index in data
+        p=val.name + ":"+ val.count
+  section.section
+    form(method='post')
+      .row
+        h3.text-center Request Form
+        .medium-6.columns
+          label
+            | First Name
+            input(type='text')
+        .medium-6.columns
+          label
+            | Last Name
+            input(type='text')
+      .row
+        .large-12.columns
+          label
+            | Email
+            input(type='email')      
+      .row
+        .large-12.columns
+          label
+            | Note
+            textarea()
+      .row
+        .large-12.columns
+          input(type='submit')  
+          

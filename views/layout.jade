@@ -1,0 +1,75 @@
+html.ng-scope(lang='en', ng-app='iframeApp', ng-controller='FoundationSitesIframeController')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(href='http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css', media='screen', rel='stylesheet')
+    link(href='/stylesheets/style.min.css', media='screen', rel='stylesheet')  
+  body
+    .off-canvas-wrapper
+      .off-canvas-wrapper-inner(data-off-canvas-wrapper='')
+        // off-canvas title bar for 'small' screen
+        .title-bar(data-responsive-toggle='widemenu', data-hide-for='medium', data-responsivetoggle='a5xydh-responsivetoggle', style='display: none;')
+          .title-bar-left
+            button.menu-icon(type='button', data-open='offCanvasLeft', aria-expanded='false', aria-controls='offCanvasLeft')
+            span.title-bar-title Foundation
+          .title-bar-right
+            span.title-bar-title Login
+            button.menu-icon(type='button', data-open='offCanvasRight', aria-expanded='false', aria-controls='offCanvasRight')
+        // off-canvas left menu
+        #offCanvasLeft.off-canvas.position-left(data-off-canvas='', aria-hidden='true', data-offcanvas='88v247-offcanvas')
+          ul.vertical.dropdown.menu(data-dropdown-menu='', role='menubar', data-dropdownmenu='lc0ddl-dropdownmenu')
+            li(role='menuitem', tabindex='0')
+              a(href='left_item_1', tabindex='-1') Left item 1
+            li(role='menuitem', tabindex='0')
+              a(href='left_item_2', tabindex='-1') Left item 2
+            li(role='menuitem', tabindex='0')
+              a(href='left_item_3', tabindex='-1') Left item 3
+        // off-canvas right menu
+        #offCanvasRight.off-canvas.position-right(data-off-canvas='', data-position='right', aria-hidden='true', data-offcanvas='ghr0pj-offcanvas')
+          ul.vertical.dropdown.menu(data-dropdown-menu='', role='menubar', data-dropdownmenu='tsi4g7-dropdownmenu')
+            li(role='menuitem', tabindex='0')
+              a(href='right_item_1', tabindex='-1') Right item 1
+            li(role='menuitem', tabindex='0')
+              a(href='right_item_2', tabindex='-1') Right item 2
+            li(role='menuitem', tabindex='0')
+              a(href='right_item_3', tabindex='-1') Right item 3
+        // "wider" top-bar menu for 'medium' and up
+        #widemenu.top-bar
+          .top-bar-left
+            ul.dropdown.menu(data-dropdown-menu='', role='menubar', data-dropdownmenu='g66a8u-dropdownmenu')
+              li.menu-text(role='menuitem', tabindex='0') Foundation
+              li.has-submenu.is-dropdown-submenu-parent.is-down-arrow(role='menuitem', tabindex='0', title='Item 1', aria-haspopup='true')
+                a(href='#', tabindex='-1') Item 1
+                ul.menu.submenu.vertical.is-dropdown-submenu.first-sub(data-submenu='', aria-hidden='true', tabindex='-1', role='menu')
+                  li.is-submenu-item.is-dropdown-submenu-item(role='menuitem', tabindex='0')
+                    a(href='left_wide_11', tabindex='-1') Left wide 1
+                  li.is-submenu-item.is-dropdown-submenu-item(role='menuitem', tabindex='0')
+                    a(href='left_wide_12', tabindex='-1') Left wide 2
+                  li.is-submenu-item.is-dropdown-submenu-item(role='menuitem', tabindex='0')
+                    a(href='left_wide_13', tabindex='-1') Left wide 3
+              li.has-submenu.is-dropdown-submenu-parent.is-down-arrow(role='menuitem', tabindex='0', title='Item 2', aria-haspopup='true')
+                a(href='#', tabindex='-1') Item 2
+                ul.menu.submenu.vertical.is-dropdown-submenu.first-sub(data-submenu='', aria-hidden='true', tabindex='-1', role='menu')
+                  li.is-submenu-item.is-dropdown-submenu-item(role='menuitem', tabindex='0')
+                    a(href='left_wide_21', tabindex='-1') Left wide 1
+                  li.is-submenu-item.is-dropdown-submenu-item(role='menuitem', tabindex='0')
+                    a(href='left_wide_22', tabindex='-1') Left wide 2
+                  li.is-submenu-item.is-dropdown-submenu-item(role='menuitem', tabindex='0')
+                    a(href='left_wide_23', tabindex='-1') Left wide 3
+          .top-bar-right
+            ul.menu
+              li
+                input(type='search', placeholder='Search')
+              li
+                button.button Search
+        // original content goes in this container
+        .off-canvas-content(data-off-canvas-content='')
+          block content
+          .js-off-canvas-exit
+        // close wrapper, no more content after this
+
+
+    include ./includes/footer.jade
+    script(src='https://code.jquery.com/jquery-2.1.4.min.js')
+    script(src='http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js')
+    script(src='/javascripts/script.js')
