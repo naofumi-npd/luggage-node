@@ -31,6 +31,10 @@ var sessionOptions = {
 
 app.use(session(sessionOptions));
 
+app.use(function(req,res,next){
+    res.locals.session = req.session;
+    next();
+});
 
 
 var requireDir = require('require-dir');
@@ -71,6 +75,8 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
+
+
 
 
 module.exports = app;

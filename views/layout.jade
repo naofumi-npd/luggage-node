@@ -58,6 +58,13 @@ html.ng-scope(lang='en', ng-app='iframeApp', ng-controller='FoundationSitesIfram
                     a(href='left_wide_23', tabindex='-1') Left wide 3
           .top-bar-right
             ul.menu
+              if session && session.user
+                li
+                  span Hey #{session.user.name}. This is Matt
+                li  
+                  a(href='/logout') Logout
+              else
+                a(href='/login') Login
               li
                 input(type='search', placeholder='Search')
               li
@@ -67,6 +74,8 @@ html.ng-scope(lang='en', ng-app='iframeApp', ng-controller='FoundationSitesIfram
           block content
           .js-off-canvas-exit
         // close wrapper, no more content after this
+
+
 
 
     include ./includes/footer.jade
